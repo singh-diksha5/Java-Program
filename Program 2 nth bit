@@ -1,0 +1,19 @@
+//program in java to declare two variables num and n and take an input during compilation time to check whether the nth bit of the given number is set (1) or not(0)
+
+import java.util.Scanner;
+public class Bit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        System.out.print("Enter the bit position (1-based index): ");
+        int n = sc.nextInt();
+
+        int new_num = num >> (n - 1);
+        if ((new_num & 1) == 1) {
+            System.out.println("The " + n + "th bit is set.");
+        } else {
+            System.out.println("The " + n + "th bit is not set.");
+        }
+    }
+}
